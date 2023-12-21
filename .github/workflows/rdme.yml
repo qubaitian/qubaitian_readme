@@ -26,3 +26,13 @@ jobs:
         uses: readmeio/rdme@v8
         with:
           rdme: changelogs ./changelogs --key=${{ secrets.README_API_KEY }}
+
+      - name: Run `openapi` command 🚀
+        uses: readmeio/rdme@v8
+        with:
+          rdme: openapi ./api/customer.yaml --key=${{ secrets.README_API_KEY }} --id=6584037987b65b0073c40641
+
+      - name: Run `openapi` command 🚀
+        uses: readmeio/rdme@v8
+        with:
+          rdme: openapi ./api/school.yaml --key=${{ secrets.README_API_KEY }} --id=658403d416acf0006be34258
