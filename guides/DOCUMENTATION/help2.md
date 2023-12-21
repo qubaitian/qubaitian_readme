@@ -1,5 +1,5 @@
 ---
-title: second try
+title: second try 2
 excerpt: Update your docs automatically with `rdme`, ReadMe's official CLI and GitHub Action!
 category: 6583dbdbdbfad200769a18f2
 ---
