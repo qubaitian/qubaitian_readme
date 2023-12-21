@@ -26,10 +26,10 @@ jobs:
       - name: Update base operations 🚀
         uses: readmeio/rdme@v8
         with:
-          rdme: openapi ./api/1.yaml --key=${{ secrets.README_API_KEY }} --id=6583d4447458e10038403742 --useSpecVersion
+          rdme: openapi ./api/1.yaml --key=${{ secrets.README_API_KEY }} --id=6583d894996c7900701ca39c --useSpecVersion
 
       # base operations
       - name: Update base operations 🚀
         uses: readmeio/rdme@v8
         with:
-          rdme: openapi ./api/2.yaml --key=${{ secrets.README_API_KEY }} --id=6583d4447458e10038403743 --useSpecVersion
+          rdme: openapi ./api/2.yaml --key=${{ secrets.README_API_KEY }} --id=6583d89a498ff5006ca41000 --useSpecVersion
