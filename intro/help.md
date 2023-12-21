@@ -1,5 +1,7 @@
+---
+title: Syncing Docs via CLI / GitHub
+excerpt: Update your docs automatically with `rdme`, ReadMe's official CLI and GitHub Action!
+category: 6583a15992293b001cfd9149
+---
 
-## Problems with an API request?
-
-We make every effort to keep this API documentation complete and error-free. If you still have a problem with one of the API requests, please open a ticket in our [support forum](https://forum.seatable.io).
-
+If you're anything like us...
