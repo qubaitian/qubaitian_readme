@@ -17,10 +17,10 @@ jobs:
       - name: Check out repo 📚
         uses: actions/checkout@v3
 
-      - name: Run `docs` command 🚀
-        uses: readmeio/rdme@v8
-        with:
-          rdme: docs ./intro --key=${{ secrets.README_API_KEY }} --version=1.0
+#      - name: Run `docs` command 🚀
+#        uses: readmeio/rdme@v8
+#        with:
+#          rdme: docs ./intro --key=${{ secrets.README_API_KEY }} --version=1.0
 
       # base operations
       - name: Update base operations 🚀
