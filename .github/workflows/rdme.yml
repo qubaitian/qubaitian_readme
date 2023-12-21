@@ -21,3 +21,8 @@ jobs:
         uses: readmeio/rdme@v8
         with:
           rdme: docs ./guides --key=${{ secrets.README_API_KEY }} --version=1.0.1
+
+      - name: Run `changelogs` command 🚀
+        uses: readmeio/rdme@v8
+        with:
+          rdme: changelogs ./changelogs --key=${{ secrets.README_API_KEY }}
