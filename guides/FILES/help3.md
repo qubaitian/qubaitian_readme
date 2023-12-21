@@ -1,7 +1,7 @@
 ---
 title: third try v1.0.2
 excerpt: Update your docs automatically with `rdme`, ReadMe's official CLI and GitHub Action!
-category: 6583dbdbdbfad200769a18f4
+category: 658405be81d11f0031dfba5f
 ---
 
 If you're anything like us...
