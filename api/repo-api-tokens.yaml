@@ -13,7 +13,7 @@ servers:
 paths:
   /api/v2.1/via-repo-token/sync-batch-move-item/:
     post:
-      summary: Sync Batch Move Item
+      summary: Sync batch move item
       tags:
         - Via Repo Token
       description: batch move files and directories, all the parameters are required
@@ -39,7 +39,7 @@ paths:
                 $ref: '#/components/schemas/ResponseSuccess'
   /api/v2.1/via-repo-token/sync-batch-copy-item/:
     post:
-      summary: Sync Batch Copy Item
+      summary: Sync batch copy item
       tags:
         - Via Repo Token
       description: batch copy files and directories, all the parameters are required
@@ -65,7 +65,7 @@ paths:
                 $ref: '#/components/schemas/ResponseSuccess'
   /api/v2.1/via-repo-token/batch-delete-item/:
     delete:
-      summary: Batch delete Item
+      summary: Batch delete item
       tags:
         - Via Repo Token
       description: batch delete files and directories, all the parameters are required
@@ -91,7 +91,7 @@ paths:
                 $ref: '#/components/schemas/ResponseSuccess'
   /api/v2.1/via-repo-token/file/?path={path}:
     post:
-      summary: rename file
+      summary: Rename file
       tags:
         - Via Repo Token
       description: Upload file
