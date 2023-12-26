@@ -1,0 +1,42 @@
+openapi: 3.0.3
+info:
+  title: via-repo-token
+  description: |-
+    Access library with API token
+  version: 1.0.1
+paths:
+  /api/v2.1/via-repo-token/sync-batch-move-item/:
+    post:
+      summary: Sync Batch Move Item
+      description: Sync Batch Move Item
+      operationId: syncBatchMoveItem
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SyncBatchMoveItemRequest'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseSuccess'
+components:
+  schemas:
+    SyncBatchMoveItemRequest:
+        type: object
+        properties:
+          src_parent_dir:
+            type: string
+          dst_parent_dir:
+            type: string
+          src_dirents:
+            type: array
+    ResponseSuccess:
+      type: object
+      properties:
+        success:
+          type: boolean
+
+
