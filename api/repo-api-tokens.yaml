@@ -7,6 +7,11 @@ info:
 tags:
   - name: Via Repo Token
     description: Access library with API token
+servers:
+  - url: https://cloud.seafile.com
+    description: Seafile Cloud
+  - url: http://127.0.0.1:8000
+    description: local test server
 paths:
   /api/v2.1/via-repo-token/sync-batch-move-item/:
     post:
