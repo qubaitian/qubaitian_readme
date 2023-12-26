@@ -1,12 +1,17 @@
 openapi: 3.0.3
 info:
-  title: via-repo-token
+  title: via repo token
   description: |-
     Access library with API token
   version: 1.0.1
+tags:
+  - name: via repo token
+    description: Access library with API token
 paths:
   /api/v2.1/via-repo-token/sync-batch-move-item/:
     post:
+      tags:
+        - via repo token
       summary: Sync Batch Move Item
       description: Sync Batch Move Item
       operationId: syncBatchMoveItem
