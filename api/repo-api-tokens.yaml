@@ -34,10 +34,17 @@ components:
         properties:
           src_parent_dir:
             type: string
+            default: '/src'
           dst_parent_dir:
             type: string
+            default: '/dst'
           src_dirents:
             type: array
+            items:
+              type: string
+              default:
+                - /a.txt
+                - /b.txt
     ResponseSuccess:
       type: object
       properties:
