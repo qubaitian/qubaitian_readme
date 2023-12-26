@@ -101,8 +101,8 @@ paths:
             description: path
             required: true
             schema:
-                type: string
-                default: /1.txt
+              type: string
+              default: /1.txt
       requestBody:
         content:
           application/json:
@@ -124,7 +124,9 @@ components:
         operation:
           type: string
           default: 'rename'
-          required: true
+          enum:
+            - rename
+            - revert
         newname:
           type: string
           default: '/2.txt'
