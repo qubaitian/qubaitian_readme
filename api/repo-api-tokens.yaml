@@ -10,15 +10,13 @@ tags:
 servers:
   - url: https://cloud.seafile.com
     description: Seafile Cloud
-  - url: http://127.0.0.1:8000
-    description: local test server
 paths:
   /api/v2.1/via-repo-token/sync-batch-move-item/:
     post:
       summary: Sync Batch Move Item
       tags:
         - Via Repo Token
-      description: Sync Batch Move Item
+      description: batch move files and directories, all the parameters are required
       parameters:
         - name: Authorization
           in: header
@@ -44,7 +42,7 @@ paths:
       summary: Sync Batch Copy Item
       tags:
         - Via Repo Token
-      description: Sync Batch Copy Item
+      description: batch copy files and directories, all the parameters are required
       parameters:
         - name: Authorization
           in: header
@@ -70,7 +68,7 @@ paths:
       summary: Batch delete Item
       tags:
         - Via Repo Token
-      description: Batch delete Item
+      description: batch delete files and directories, all the parameters are required
       parameters:
         - name: Authorization
           in: header
