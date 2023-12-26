@@ -5,21 +5,27 @@ info:
     Access library with API token
   version: 1.0.1
 tags:
-  - name: via repo token
+  - name: Via Repo Token
     description: Access library with API token
 paths:
   /api/v2.1/via-repo-token/sync-batch-move-item/:
     post:
       tags:
-        - via repo token
-      summary: Sync Batch Move Item
+        - Via Repo Token
       description: Sync Batch Move Item
-      operationId: syncBatchMoveItem
+      parameters:
+        - name: Authorization
+          in: header
+          description: Token ********
+          required: true
+          schema:
+            type: string
+            default: Token ********
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/SyncBatchMoveItemRequest'
+              $ref: '#/components/schemas/SyncBatchMoveAndCopyRequestBody'
       responses:
         '200':
           description: OK
@@ -27,9 +33,113 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ResponseSuccess'
+  /api/v2.1/via-repo-token/sync-batch-copy-item/:
+    post:
+      tags:
+        - Via Repo Token
+      description: Sync Batch Copy Item
+      parameters:
+        - name: Authorization
+          in: header
+          description: Token ********
+          required: true
+          schema:
+            type: string
+            default: Token ********
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SyncBatchMoveAndCopyRequestBody'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseSuccess'
+  /api/v2.1/via-repo-token/batch-delete-item/:
+    delete:
+      tags:
+        - Via Repo Token
+      description: Batch delete Item
+      parameters:
+        - name: Authorization
+          in: header
+          description: Token ********
+          required: true
+          schema:
+            type: string
+            default: Token ********
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeleteRequestBody'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseSuccess'
+  /api/v2.1/via-repo-token/file/?path={path}:
+    post:
+      tags:
+          - Via Repo Token
+      description: Upload file
+      parameters:
+          - name: Authorization
+            in: header
+            description: Token ********
+            required: true
+            schema:
+                type: string
+                default: Token ********
+          - name: path
+            in: path
+            description: path
+            required: true
+            schema:
+                type: string
+                default: /1.txt
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RenameRequestBody'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseSuccess'
+
 components:
   schemas:
-    SyncBatchMoveItemRequest:
+    RenameRequestBody:
+      type: object
+      properties:
+        operation:
+          type: string
+          default: 'rename'
+          required: true
+        newname:
+          type: string
+          default: '/2.txt'
+    DeleteRequestBody:
+      type: object
+      properties:
+        parent_dir:
+          type: string
+          default: '/src'
+        dirents:
+          type: array
+          items:
+            type: string
+            default: '/1.txt'
+    SyncBatchMoveAndCopyRequestBody:
         type: object
         properties:
           src_parent_dir:
@@ -42,9 +152,7 @@ components:
             type: array
             items:
               type: string
-              default:
-                - /a.txt
-                - /b.txt
+              default: '/1.txt'
     ResponseSuccess:
       type: object
       properties:
