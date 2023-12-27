@@ -17,30 +17,20 @@ jobs:
       - name: Check out repo 📚
         uses: actions/checkout@v3
 
-      - name: Run `docs` command 🚀
-        uses: readmeio/rdme@v8
-        with:
-          rdme: docs ./guides --key=${{ secrets.README_API_KEY }} --version=1.0.1
-
-      - name: Run `changelogs` command 🚀
-        uses: readmeio/rdme@v8
-        with:
-          rdme: changelogs ./changelogs --key=${{ secrets.README_API_KEY }}
+#      - name: Run `docs` command 🚀
+#        uses: readmeio/rdme@v8
+#        with:
+#          rdme: docs ./guides --key=${{ secrets.README_API_KEY }} --version=1.0.1
+#
+#      - name: Run `changelogs` command 🚀
+#        uses: readmeio/rdme@v8
+#        with:
+#          rdme: changelogs ./changelogs --key=${{ secrets.README_API_KEY }}
 
       - name: Run `docs` command 🚀
         uses: readmeio/rdme@v8
         with:
           rdme: docs ./reference --key=${{ secrets.README_API_KEY }} --version=1.0.1
-
-      - name: Run `openapi` command 🚀
-        uses: readmeio/rdme@v8
-        with:
-          rdme: openapi ./api/customer.yaml --key=${{ secrets.README_API_KEY }} --id=6584037987b65b0073c40641
-
-      - name: Run `openapi` command 🚀
-        uses: readmeio/rdme@v8
-        with:
-          rdme: openapi ./api/school.yaml --key=${{ secrets.README_API_KEY }} --id=658403d416acf0006be34258
 
       - name: Run `openapi` command 🚀
         uses: readmeio/rdme@v8
