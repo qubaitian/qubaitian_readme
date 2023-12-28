@@ -1,6 +1,6 @@
 ---
 title: Authentication
-excerpt: The authentication in Seafile.
+excerpt: The authentication flows of SeaTable.
 category: 658bc87fd352d6004fe43f8f
 isReference: true
 ---
