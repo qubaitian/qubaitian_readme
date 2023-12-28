@@ -36,3 +36,8 @@ jobs:
         uses: readmeio/rdme@v8
         with:
           rdme: openapi ./api/repo-api-tokens.yaml --key=${{ secrets.README_API_KEY }} --id=658a8085ddbf15002d3426cb
+
+      - name: Run `openapi` command 🚀
+        uses: readmeio/rdme@v8
+        with:
+          rdme: openapi ./api/quickstart.yaml --key=${{ secrets.README_API_KEY }} --id=658d1b9f74a8660079f3a72e
