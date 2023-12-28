@@ -16,10 +16,14 @@ All other API-requests require an authorization header that looks like this, whe
 
 > Account-Token
 >
-> An **Account-Token** authenticates an _account API request_ (=Account Operations) like add a new base, add a group member or list all collaborators of a base. The Account-Token can be generated with the account-credentials.
+> An **Account-Token** is generated when you login to Seafile. Generally, there is no need to generate an Account-Token manually.
+> Seafile websites will automatically generate an Account-Token for you and store it in your browser's local storage. This token is valid until you logout.
+> Almost your operations require an Account-Token.
 
 > Library-Token
 >
-> An **API-Token** is like a password to use the API requests of a single base. The main purpose of an API-Token is to generate a Base-Token.
-> You can create as many API-Token per base as you want. Every API-Token can have different read or write permissions. This token is valid until you delete them.
+> An **Library-Token** is like a password to use the API requests of a single library. 
+> You can create as many API-Token per base as you want. Every Library-Token can have read or write permissions. This token is valid until you delete them.
+> If the user only needs to manipulate the contents of a specific database, it is more secure to use the library API token.
+
 
