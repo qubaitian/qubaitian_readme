@@ -10,7 +10,7 @@ tags:
   - name: Library-Token
     description: Access library with Library-Token
 servers:
-  - url: https://seafile.example.com
+  - url: https://$(ENV_VAR)
     description: Seafile Cloud
 paths:
   /api2/ping/:
@@ -57,7 +57,7 @@ paths:
           required: true
           schema:
             type: string
-            example: Token ********
+            example: $(ENV_VAR)
         - name: repo_id
           in: path
           description: repo id
