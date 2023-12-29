@@ -44,6 +44,29 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/AccountTokenResponseBody'
+  /api/v2.1/repos/{repo_id}/repo-api-tokens/:
+    get:
+      summary: list repo api tokens
+      tags:
+        - Library-Token
+      description: list repo api tokens of a library
+      parameters:
+        - name: Authorization
+          in: header
+          description: Token ********
+          required: true
+          schema:
+            type: string
+            example: Token ********
+        - name: repo_id
+          in: path
+          description: repo id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
 components:
   schemas:
     AccountTokenRequestBody:
