@@ -26,8 +26,38 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ResponseSuccess'
+  /api2/auth-token/:
+    post:
+      summary: obtain account token
+      tags:
+        - Account-Token
+      description: obtain account token with username and password
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountTokenRequestBody'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountTokenResponseBody'
 components:
   schemas:
+    AccountTokenRequestBody:
+      type: object
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+    AccountTokenResponseBody:
+      type: object
+      properties:
+        token:
+          type: string
     ResponseSuccess:
       type: object
       properties:
